@@ -1,0 +1,7 @@
+Name:          lab4-resource-quota
+Namespace:     lab4
+Resource       Used   Hard
+--------       ----   ----
+limits.cpu     750m   1
+limits.memory  768Mi  1Gi
+pods           3      5
