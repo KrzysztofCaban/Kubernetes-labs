@@ -98,7 +98,7 @@ spec:
 
 ```
 
-# Wybór ilości maxReplicas
+# Wybór liczby maxReplicas
 Po przeliczeniu dostępnych zasobów ResourceQuota i uwgzlędniając pod workera, zdecydowano o ustaleniu maksymalnej liczby replik na liczbę 5, dzięki czemu limity ResourceQuota nie zostaną przekroczone.
 
 ### Sprawdzenie poprawności uruchomienia
