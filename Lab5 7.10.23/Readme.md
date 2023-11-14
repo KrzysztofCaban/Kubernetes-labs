@@ -1,5 +1,5 @@
 ### Plik zbiorczy yaml
-```
+```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
