@@ -149,4 +149,4 @@ kubectl describe hpa php-apache -n lab5 > dsc_hpa.yaml
 kubectl get hpa -n lab5
 ```
 ![get_hpa_load](screens/get_hpa_load.png)
-Widzimy, zwiększenie się ilośc replic do 4.
+Widzimy, zwiększenie się liczby replic do 4.
