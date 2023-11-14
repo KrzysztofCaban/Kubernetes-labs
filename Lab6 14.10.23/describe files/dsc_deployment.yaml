@@ -1,0 +1,33 @@
+Name:                   nginx-deployment
+Namespace:              lab6
+CreationTimestamp:      Tue, 14 Nov 2023 12:40:11 +0100
+Labels:                 app=nginx
+                        type=proxy
+Annotations:            deployment.kubernetes.io/revision: 1
+                        version: 1.0
+Selector:               app=nginx
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  2 max unavailable, 1 max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.9
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   nginx-deployment-784dc64bf4 (5/5 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  4m38s  deployment-controller  Scaled up replica set nginx-deployment-784dc64bf4 to 5
