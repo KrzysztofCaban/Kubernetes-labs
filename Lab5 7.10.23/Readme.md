@@ -103,41 +103,41 @@ Po przeliczeniu dostępnych zasobów ResourceQuota i uwgzlędniając pod workera
 
 ### Sprawdzenie poprawności uruchomienia
 #### namespace
-```
+```zsh
 kubectl get ns
 kubectl describe namespace lab5 > dsc_namespace.yaml
 ```
 ![get_ns](screens/get_ns.png)
 
 #### resourcequota
-```
+```zsh
 kubectl describe resourcequotas quota-lab5 -n lab5
 ```
 ![get_rq](screens/get_rq.png)
 
 #### pod workera
-```
+```zsh
 kubectl get pods -n lab5 worker
 kubectl describe pod worker -n lab5 > dsc_worker.yaml
 ```
 ![get_worker](screens/get_worker.png)
 
 #### deployment
-```
+```zsh
 kubectl get deployment -n lab5
 kubectl describe deployment php-apache -n lab5 > dsc_deployment.yaml
 ```
 ![get_depl](screens/get_depl.png)
 
 #### service
-```
+```zsh
 kubectl get service -n lab5
 kubectl describe service php-apache -n lab5 > dsc_service.yaml
 ```
 ![get_s](screens/get_s.png)
 
 #### autoscaler
-```
+```zsh
 kubectl get hpa -n lab5
 kubectl describe hpa php-apache -n lab5 > dsc_hpa.yaml
 ```
@@ -145,8 +145,8 @@ kubectl describe hpa php-apache -n lab5 > dsc_hpa.yaml
 
 
 ### Sprawdzenie działania autoscalera pod obciążeniem
-```
+```zsh
 kubectl get hpa -n lab5
 ```
 ![get_hpa_load](screens/get_hpa_load.png)
-Widzimy, zwiększenie się liczby replic do 4.
+Widzimy zwiększenie się liczby replic do 4.
