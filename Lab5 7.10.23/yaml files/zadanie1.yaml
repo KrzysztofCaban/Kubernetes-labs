@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: lab4
+  name: lab5
 
 ---
 
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: quota-zad5
-  namespace: zad5
+  name: quota-lab5
+  namespace: lab5
 spec:
   hard:
     pods: "10"
