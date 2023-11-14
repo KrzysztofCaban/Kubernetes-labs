@@ -1,0 +1,57 @@
+Name:             worker
+Namespace:        lab5
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Tue, 14 Nov 2023 10:17:16 +0100
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.43
+IPs:
+  IP:  10.244.0.43
+Containers:
+  nginx-container:
+    Container ID:   docker://02d34f3e89994fd691fb8ea94814687508caedd8ec9a69d47d0478306dd8f903
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:86e53c4c16a6a276b204b0fd3a8143d86547c967dc8258b3d47c3a21bb68d3c6
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Tue, 14 Nov 2023 10:18:57 +0100
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  200Mi
+    Requests:
+      cpu:        100m
+      memory:     100Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hm9xg (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-hm9xg:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  45m   default-scheduler  Successfully assigned lab5/worker to minikube
+  Normal  Pulling    45m   kubelet            Pulling image "nginx"
+  Normal  Pulled     44m   kubelet            Successfully pulled image "nginx" in 1m40.389367505s (1m40.389445838s including waiting)
+  Normal  Created    44m   kubelet            Created container nginx-container
+  Normal  Started    44m   kubelet            Started container nginx-container

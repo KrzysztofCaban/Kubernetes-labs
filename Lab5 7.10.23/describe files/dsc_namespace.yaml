@@ -1,0 +1,14 @@
+Name:         lab5
+Labels:       kubernetes.io/metadata.name=lab5
+Annotations:  <none>
+Status:       Active
+
+Resource Quotas
+  Name:     quota-lab5
+  Resource  Used   Hard
+  --------  ---    ---
+  cpu       700m   2
+  memory    700Mi  1536Mi
+  pods      5      10
+
+No LimitRange resource.

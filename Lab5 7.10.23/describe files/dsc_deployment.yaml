@@ -1,0 +1,37 @@
+Name:                   php-apache
+Namespace:              lab5
+CreationTimestamp:      Tue, 14 Nov 2023 11:05:57 +0100
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               run=php-apache
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  run=php-apache
+  Containers:
+   php-apache:
+    Image:      registry.k8s.io/hpa-example
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     250m
+      memory:  250Mi
+    Requests:
+      cpu:        150m
+      memory:     150Mi
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   php-apache-74dccfb695 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  106s  deployment-controller  Scaled up replica set php-apache-74dccfb695 to 1

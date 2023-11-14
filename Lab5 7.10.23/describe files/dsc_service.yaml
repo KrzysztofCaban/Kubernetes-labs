@@ -1,0 +1,15 @@
+Name:              php-apache
+Namespace:         lab5
+Labels:            run=php-apache
+Annotations:       <none>
+Selector:          run=php-apache
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.110.27.241
+IPs:               10.110.27.241
+Port:              <unset>  80/TCP
+TargetPort:        80/TCP
+Endpoints:         10.244.0.57:80
+Session Affinity:  None
+Events:            <none>
