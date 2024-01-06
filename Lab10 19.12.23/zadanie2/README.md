@@ -175,7 +175,7 @@ jobs:
 ```
 
 ## <span style="color:red">Uwaga</span>
-Z powodu pracy na platformie z chipsetem ARM, podczas budowania obrazu wymagane było ustawienie dodatkowego parametru dla stepu `Build and Push` - opcja `platform` z wprowadzonymi architekturami `linux/amd64,linux/arm64`. Bez tego kroku, obraz budowany był jedynie na architekturę x86 co w dalszej części powodowało błąd przy pobieraniu obrazu z Docker Hub i stawianiu na nim deploymentu.
+Z powodu pracy na platformie z chipsetem ARM, podczas budowania obrazu wymagane było ustawienie dodatkowego parametru dla stepu `Build and Push` - opcja `platforms` z wprowadzonymi architekturami `linux/amd64,linux/arm64`. Bez tego kroku, obraz budowany był jedynie na architekturę x86 co w dalszej części powodowało błąd przy pobieraniu obrazu z Docker Hub i stawianiu na nim deploymentu.
 
 ```yaml
 - name: Build and push
@@ -191,7 +191,7 @@ Bez ustawienia tej opcji budowane obrazy były przeznaczone jedynie na platform�
 
 ![dokcer_hub_amd_only](./screens/dockerhub_image_amd.png)
 
-Po dodaniu informacji, aby obraz był także kompatybilny z architekturą ARM:
+Po dodaniu informacji, aby obraz był także kompatybilny z architekturą ARM - `linux/arm64`:
 
 ![docker_hub_amd_arm](./screens/dockerhub_image_amd_arm.png)
 
