@@ -174,7 +174,7 @@ jobs:
           git push
 ```
 
-## <span style="color:red">Uwaga</span>
+## $${\color{red}Uwaga}$$
 Z powodu pracy na platformie z chipsetem ARM, podczas budowania obrazu wymagane było ustawienie dodatkowego parametru dla stepu `Build and Push` - opcja `platforms` z wprowadzonymi architekturami `linux/amd64,linux/arm64`. Bez tego kroku, obraz budowany był jedynie na architekturę x86 co w dalszej części powodowało błąd przy pobieraniu obrazu z Docker Hub i stawianiu na nim deploymentu.
 
 ```yaml
