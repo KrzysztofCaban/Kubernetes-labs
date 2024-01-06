@@ -1,0 +1,1 @@
+kubectl exec -it sleepybox2 -- wget --spider --timeout=1 lab8server-service.restricted.svc.cluster.local

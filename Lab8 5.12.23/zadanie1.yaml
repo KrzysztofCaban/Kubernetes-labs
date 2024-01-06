@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab8server
+  namespace: restricted
+  labels:
+    name: lab8server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lab8server
+  template:
+    metadata:
+      labels:
+        app: lab8server
+    spec:
+      containers:
+      - name: lab8server
+        image: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: lab8server-service
+  namespace: restricted
+  labels:
+    name: lab8server-service
+spec:
+  selector:
+    app: lab8server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
