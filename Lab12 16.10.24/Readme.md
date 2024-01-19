@@ -1,3 +1,6 @@
+## Utworzenie prywatnego repozytorium na Docker Hub
+![repo](./screens/repo.png)
+
 ## Plik dockerfile
 ```yaml
 FROM nginx:latest
@@ -24,12 +27,12 @@ spec:
 ```
 
 
-## tworzenie obiektu secret
+## Tworzenie obiektu secret
 ```zsh
 kubectl create secret docker-registry my-secret-dh --docker-server=https://index.docker.io/v1/ --docker-username=kcaban99 --docker-password=<<DOCKERHUB_TOKEN>>
 ```
 
-## sprawdzenie poprawności zapisania secretu
+## Sprawdzenie poprawności zapisania secretu
 ```zsh
 kubectl get secret
 ```
@@ -40,7 +43,7 @@ kubectl get secret
 kubectl apply -f test12.yaml
 ```
 
-## sprawdzenie poprawności działania
+## Sprawdzenie poprawności działania
 ```zsh
 kubectl get pod
 ```
