@@ -1,0 +1,53 @@
+Name:             test12
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Fri, 19 Jan 2024 11:05:57 +0100
+Labels:           <none>
+Annotations:      cni.projectcalico.org/containerID: 818e5759ab0b9f3d39ac3ced9265a32a361f416b8be402634fb868a554a13e41
+                  cni.projectcalico.org/podIP: 10.244.120.65/32
+                  cni.projectcalico.org/podIPs: 10.244.120.65/32
+Status:           Running
+IP:               10.244.120.65
+IPs:
+  IP:  10.244.120.65
+Containers:
+  nginx-container:
+    Container ID:   docker://89aae68d834bbbce0dbce30127a267090f5f23b1ad65e3c5adfc68820f43bffe
+    Image:          kcaban99/lab12_repo:lab12
+    Image ID:       docker-pullable://kcaban99/lab12_repo@sha256:a973acc6ecea0254ce77c9caafb79d941da3e0d182607b3f07fc601433fc0bcf
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Fri, 19 Jan 2024 11:06:03 +0100
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bpfpn (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-bpfpn:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m23s  default-scheduler  Successfully assigned default/test12 to minikube
+  Normal  Pulling    4m23s  kubelet            Pulling image "kcaban99/lab12_repo:lab12"
+  Normal  Pulled     4m17s  kubelet            Successfully pulled image "kcaban99/lab12_repo:lab12" in 5.426251294s (5.426259753s including waiting)
+  Normal  Created    4m17s  kubelet            Created container nginx-container
+  Normal  Started    4m17s  kubelet            Started container nginx-container
