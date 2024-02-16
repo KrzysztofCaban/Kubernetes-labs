@@ -17,4 +17,4 @@ spec:
               image: kcaban99/lab10gitops
               command: [sh, -e, -c]
               args:
-                - git clone https://github.com/KrzysztofCaban/lab10_config.git /tmp/lab10_config && find /tmp/lab10_config -name '*.yaml' -exec kubectl apply -f {} \;
+                - git clone https://github.com/KrzysztofCaban/Kubernetes_lab10_config.git /tmp/lab10_config && find /tmp/lab10_config -name '*.yaml' -exec kubectl apply -f {} \;
